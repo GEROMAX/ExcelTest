@@ -41,8 +41,11 @@ namespace ExcelTest
                 worksheet.Cell(1, 3).Value = lst.Select<SelectDataEntity, string>(record => record.Address);
                 worksheet.Cell(1, 4).Value = lst.Select<SelectDataEntity, string>(record => record.Price.ToString());
                 worksheet.Cell(1, 5).Value = lst.Select<SelectDataEntity, string>(record => record.RegistDate.ToString("yyyy/MM/dd"));
-                workbook.SaveAs(this.saveFileDialog1.FileName);
 
+                //列幅調整
+                worksheet.Columns().AdjustToContents();
+
+                workbook.SaveAs(this.saveFileDialog1.FileName);
             }
         }
     }
