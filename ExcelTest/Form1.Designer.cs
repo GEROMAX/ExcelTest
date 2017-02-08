@@ -67,6 +67,7 @@
             // saveFileDialog1
             // 
             this.saveFileDialog1.DefaultExt = "xlsx";
+            this.saveFileDialog1.FileName = "テストファイル";
             // 
             // Form1
             // 
